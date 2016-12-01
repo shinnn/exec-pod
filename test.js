@@ -17,7 +17,7 @@ test('execPod()', t => {
 
   execPod('try').then(t.fail, err => {
     t.ok(
-      /Command failed: pod try\n\[!\] A Pod name or URL is required\./.test(err.message),
+      /Command failed: pod try\n\[!] A Pod name or URL is required\./.test(err.message),
       'should be rejected when the a command fails.'
     );
   }).catch(t.fail);
